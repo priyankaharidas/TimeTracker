@@ -1,19 +1,30 @@
+
 <!DOCTYPE html>
-<html>
-<body>
+<html>    
+    <head>
+	     <style>
+		      body{ text-align:"center";
+                    background-color: lightblue;
+                   }
+        </style>
+		<script>
+		    id
+            function myFunction() {
+                alert("Hello World!");
+            }
 
-<p>Hello! XYZ.</p>
-
-<button onclick="myFunction()">Clock In</button>
-
-<p id="clockin"></p>
-
-<script>
-function myFunction() {
-    document.getElementById("clockin").innerHTML = "Thanks for Coming, have a great day";
-}
-
+<script language="javascript" type="text/javascript">
+    function getTimeStamp() {
+        var now = new Date();
+        return ((now.getMinutes() < 10) ? (
+           "0" + now.getMinutes()) : (now.getMinutes()));
+    }
 </script>
-
+</head>
+<body>
+                 <div style="text-align: center;">
+                       <p><input type="button" value="clock-In" onClick="getTimeStamp();"></p>
+                       <p><input type="button" value="clock-Out" onClick="getTimeStamp();"></p>
+                 </div>
 </body>
 </html>
